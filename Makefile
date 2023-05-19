@@ -3,11 +3,11 @@ export DOCKER_BUILDKIT	:=	1
 .PHONY: lint-check lint-fix
 
 lint-check:
-	black --check --diff app
-	autoflake --check -ri --ignore-init-module-imports --remove-all-unused-imports app
-	mypy -p app
+	black --check --diff web_scraper
+	autoflake --check -ri --ignore-init-module-imports --remove-all-unused-imports web_scraper
+	mypy -p web_scraper
 
 lint-fix:
-	black app
-	autoflake -ri --ignore-init-module-imports --remove-all-unused-imports app
-	mypy -p app
+	black web_scraper
+	autoflake -ri --ignore-init-module-imports --remove-all-unused-imports web_scraper
+	mypy -p web_scraper
